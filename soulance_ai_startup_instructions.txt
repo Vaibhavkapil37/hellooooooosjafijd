@@ -1,0 +1,24 @@
+
+# Step 1: Create and activate a virtual environment (Windows)
+python -m venv venv
+venv\Scripts\activate
+
+# Step 1 (Linux/Mac)
+python3 -m venv venv
+source venv/bin/activate
+
+# Step 2: Upgrade pip
+pip install --upgrade pip
+
+# Step 3: Install dependencies
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install transformers datasets soundfile
+
+# Step 4: Run chatbot demo
+python chatbot_demo.py
+
+# Step 5: Run stress detection demo (replace sample.wav with your file path)
+python stress_voice_demo.py sample.wav
+
+# Step 6: Run emotion detection demo (replace sample.wav with your file path)
+python emotion_voice_demo.py sample.wav
